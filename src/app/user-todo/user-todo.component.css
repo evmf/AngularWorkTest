@@ -1,0 +1,56 @@
+/* main style */
+.flex-container {
+  display: flex;
+  margin: 40px;
+}
+
+.content {
+  display: table;
+}
+
+#user-div {
+  padding-right: 25px;
+  padding-top: 5px;
+}
+
+#todo-div {
+  border: 5px solid #686868;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  min-height: 850px;
+  width: 100%;
+}
+
+/* table style */
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.headRow {
+  background-color: #979797;
+}
+
+#column1finished {
+  width: 25%;
+}
+
+#column2title {
+  width: 75%;
+}
+
+.checkbox {
+  align-self: center;
+}

@@ -1,0 +1,39 @@
+<body>
+
+  <div class="flex-container">
+
+    <div id="user-div" class="content">
+      <h2>Användare</h2>
+      <select name="user-select" [(ngModel)]="selectedValue" (change)="onUserChangeSelection($event)">
+        <option *ngFor="let user of listUser" [value]="user.id">
+              {{user.name}}
+          </option>
+      </select>
+    </div>
+
+    <div id="todo-div" class="content">
+      <h2>To Do's</h2>
+      <table>
+        <thead>
+          <tr>
+            <th id="column1finished" class="headRow">Slutförd</th>
+            <th id="column2title" class="headRow">Titel</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let toDo of listToDo">
+            <td>
+              <div class="containercheck">
+                <input type="checkbox" id="checkboxtable" [checked]="toDo.completed" readonly=true> <!-- mat-checkbox is also an option for angular -->
+              </div>
+            </td>
+            <td>{{toDo.title}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+    
+</body>
+
